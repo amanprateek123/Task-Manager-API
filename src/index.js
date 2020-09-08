@@ -1,21 +1,5 @@
-const express = require('express')
-require('./db/mongoose')
-const userRouter = require('./routers/users')
-const taskRouter = require('./routers/tasks')
-
-const app = express()
+const app = require('./app')
 const port = process.env.PORT
-
-//middleware
-app.use((req,res,next)=>{
-    console.log(req.method,req.path)
-    next()
-})
-
-app.use(express.json())
-app.use(userRouter)
-app.use(taskRouter)
-
 //testing
 // const multer = require('multer')
 // const upload = multer({

@@ -6,6 +6,7 @@ const {sendWelcomeEmail} = require('../emails/account')
 const router = new express.Router()
 
 //signup
+
 router.post('/users',async (req,res)=>{
     const user = new User(req.body)
     try{

@@ -16,7 +16,7 @@ const auth = async (req,res,next)=>{
       next()
    }
    catch(e){
-       res.status(401).send({error:'Aunthetication failed.'})
+       res.status(401).send({error:'Aunthetication failed.Please login!'})
    }
 }
 
